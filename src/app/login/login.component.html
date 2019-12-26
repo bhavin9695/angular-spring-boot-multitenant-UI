@@ -1,0 +1,74 @@
+<div class="login-page">
+  <div class="form">
+    <div class="headingDiv">
+      <h1 class="heading">Sign {{notRegistered ? 'Up' : 'In'}} with </h1>
+    </div>
+    <form id="registration-form"
+          name="registrationForm"
+          class="register-form"
+          #registrationForm="ngForm"
+          *ngIf="notRegistered">
+
+      <input type="text"
+             placeholder="Username"
+             name="username"
+             id="username_regi"
+             [(ngModel)]="username"
+             required/>
+
+      <input type="password"
+             name="password"
+             id="password_regi"
+             [(ngModel)]="password"
+             placeholder="Password" required/>
+
+      <div class="form-group">
+        <select class="form-control" name="tenantSelect" [(ngModel)]="tenant" id="tenantSelect" required>
+          <option value="undefined" selected disabled>Select Tenant</option>
+          <option value="google">Google</option>
+          <option value="apple">Apple</option>
+
+        </select>
+      </div>
+
+      <p [ngClass]="{'alert': true,
+                     'danger': !isRegistrationSuccess,
+                     'success': isRegistrationSuccess}"
+         *ngIf="registrationMessage">* {{registrationMessage}}</p>
+
+      <button [disabled]="registrationForm.invalid" (click)="registration()">Sign Up</button>
+
+      <p class="message">Already registered? <b><a (click)="notRegistered = false">Sign In</a></b></p>
+
+    </form>
+
+    <form class="login-form"
+          #loginForm="ngForm"
+          name="loginForm"
+          id="login-form"
+          *ngIf="!notRegistered">
+      <input type="text"
+             placeholder="Username"
+             name="username"
+             id="username"
+             [(ngModel)]="username"
+             required/>
+
+      <input type="password"
+             name="password"
+             id="password"
+             [(ngModel)]="password"
+             placeholder="Password" required/>
+
+      <p [ngClass]="{'alert': true,
+                     'danger': !isLoginSuccess,
+                     'success': isLoginSuccess}"
+         *ngIf="loginMessage">* {{loginMessage}}</p>
+
+      <button [disabled]="loginForm.invalid" (click)="login()">Sign In</button>
+
+
+      <p class="message">Not registered? <b><a (click)="notRegistered = true">Create an account</a></b></p>
+    </form>
+  </div>
+</div>

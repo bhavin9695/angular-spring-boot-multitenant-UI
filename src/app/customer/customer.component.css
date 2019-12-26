@@ -1,0 +1,93 @@
+#customer-list{
+  padding: 10px 30px 30px;
+}
+
+#count-detail{
+  display: inline-block;
+  margin-right: 25px;
+  margin-top: 15px;
+  text-align: right;
+
+}
+
+#import-from-excel{
+  margin-bottom: 25px;
+  display: inline-block;
+}
+
+#import-from-excel button:hover, #import-from-excel button:focus{
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(29,45,196,.25)
+}
+
+.add-new-customer{
+  float: right;
+}
+#customer-list-content{
+  background-color: #FFFFFF;
+  border: 1px solid #ededf2;
+  border-radius: 4px;
+}
+
+#customer-list-body{
+  padding: 25px 20px;
+}
+
+#list-body{
+  margin-top: 20px;
+}
+
+.loading-img-div{
+  margin-top: 50px;
+  text-align: center;
+}
+
+.body-row{
+  line-height: 40px;
+  border-bottom: 1px solid #ccc;
+}
+
+.body-row:hover{
+  background-color: #ccc;
+}
+
+.body-row:last-of-type{
+  border-bottom: none;
+}
+
+.list-header-item, .list-body-item{
+  font-weight: bold;
+}
+
+.list-header-item .error-block{
+  font-size: 12px;
+}
+
+.list-header-item{
+  font-size: 16px;
+}
+
+.list-body-item{
+  font-size: 14px;
+}
+
+.customer-name a:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.fa-circle-thin {
+  color: #abaeb5;
+}
+
+.fa-check-circle {
+  color: #e76f38;
+}
+
+
+
+input.text-input{
+  background-color: #FFFFFF;
+  font-size: 14px;
+  border-color: #ededf2;
+}
