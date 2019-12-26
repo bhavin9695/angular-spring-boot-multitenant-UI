@@ -1,6 +1,6 @@
 # Kind Note : 
 
-This is very basic ui to show angular knowledge and [Backend](https://github.com/bhavin9695/spring-boot-multitenant-architecture) api integration.
+This is very basic ui to show angular knowledge and [Backend](https://github.com/bhavin9695/spring-boot-multitenant-architecture) api integration with spring boot + hibernate
 
 I request you to kindly ignore user appearance.
 
